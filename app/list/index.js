@@ -1,27 +1,31 @@
+//const addCheckButton = require('./check');
 const list = (data, status) => {
   const container = document.createElement('div');
-  const filteredData = data.filter(element => {
-    if(element.status === status){
+  const filtererData = data.filter(element => {
+    if(element.status == status ){
       return element;
     }
   });
-  if(!!filteredData && Array.isArray(filteredData)){
-    filteredData.forEach( task => {
+  if(!!filtererData && Array.isArray(filtererData)){
+    filtererData.forEach( task => {
       container.appendChild(listElement(task))
     });
   }
   return container;
 }
 
-const listElement = (task) => {
+const listElement = task => {
   const element = document.createElement('div');
-  const input = document.createElement('input');
-  input.type = 'checkbox';
-  input.id = task.id;
-  input.value = task.id;
   element.innerHTML = task.name;
-  element.appendChild(input);
-
+  //create checkbox
+  const inputCheck = document.createElement("input");
+  inputCheck.name = task.id;
+  inputCheck.id = task.id;
+  inputCheck.value = task.id;
+  //inputCheck.id = task.name;
+  inputCheck.type = "checkbox";
+  element.appendChild(inputCheck);
+  //finish creating the Checkbox
   return element;
 }
 

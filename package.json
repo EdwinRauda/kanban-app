@@ -26,6 +26,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "node-module": "^2.0.0",
     "uuid": "^8.3.2"
   }
 }
