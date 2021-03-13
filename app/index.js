@@ -7,12 +7,13 @@ const task = require('./task');
 const doing = require('./doing');
 
 require('../static/css/style.css');
-
+//add-task y todo parte de html base
 const app = document.getElementById('add-task');
 const todoContainer = document.getElementById('to-do');
 const doingContainer = document.getElementById('doing');
+//cuando encuentre un elemento en columna to-do con el calor del checkbox que cambie su estado a DOING
 const moveToDoing = (element) => {
-  console.log("Data length: "+data.length)
+  //console.log("Data length: "+data.length)
   for (let i = 0; i < data.length; i++) {
     if (data[i].id === element.target.value) {
       data[i].status = status.DOING;
@@ -22,6 +23,7 @@ const moveToDoing = (element) => {
   doing.loadList(data, doingContainer);
   addMoveToDoingEvent();
 }
+//loadlist carga la lista
 todo.loadList(data, todoContainer);
 const addMoveToDoingEvent = () => {
   const todoItems = document.querySelectorAll('#to-do input');

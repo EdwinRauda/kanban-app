@@ -4,7 +4,7 @@ const {
   v4: uuidv4
 } = require('uuid');
 
-//Hasta donde entiendo carga las listas con un array y un contenedor pero no se el porque el innerHTML = ''
+//Hasta donde entiendo carga las listas con un array 
 const loadList = (data, container) => {
   container.innerHTML = '';
   container.appendChild(list(data,status.TODO));

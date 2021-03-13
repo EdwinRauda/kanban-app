@@ -1,8 +1,8 @@
 //const addCheckButton = require('./check');
-const list = (data, status) => {
+const list = (data, type) => {
   const container = document.createElement('div');
   const filtererData = data.filter(element => {
-    if(element.status == status ){
+    if(element.status == type ){
       return element;
     }
   });
